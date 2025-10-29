@@ -11,5 +11,6 @@ FROM openjdk:21-slim
 EXPOSE 8080
 
 COPY --from=build /target/contas.jar .
+COPY --from=build contas.sqlite .
 
 ENTRYPOINT ["java", "-jar", "contas.jar"]
