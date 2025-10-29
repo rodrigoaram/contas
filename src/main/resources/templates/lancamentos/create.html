@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.themyleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Adicionar Lançamento</title>
+	<link href="/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<div th:insert="~{parts/header :: header}"></div>
+	
+	<h2>Adicionar Lançamento</h2>
+		
+	<div class="container content">
+	
+		<div th:insert="~{parts/flash :: flash}"></div>
+	
+		<form method="POST" th:action="@{/lancamentos/store}" th:object="${lancamento}">
+			
+			<fieldset class="tipo-lacamento">
+				<legend>Tipo de Entrada</legend>
+				<div class="field">
+					<input type="radio" name="tipoLancamento" id="ENTRADA" value="ENTRADA" checked>
+					<label for="ENTRADA">ENTRADA</label>
+				</div>
+				<div class="field">
+					
+					<input type="radio" name="tipoLancamento" id="SAIDA" value="SAIDA">
+					<label for="SAIDA">SAÍDA</label>
+				</div>
+			</fieldset>
+			
+			<div class="row">
+				<div class="field">
+					<label for="valor">Valor</label>
+					<input type="number" min="0" name="valor" id="valor">
+					<div class="error" th:if="${#fields.hasErrors('valor')}" th:errors="*{valor}"></div>
+				</div>
+				
+				<div class="field">
+					<label for="data">Data</label>
+					<input type="date" name="data" id="data" th:value="${hoje}">
+					<div class="error" th:if="${#fields.hasErrors('data')}" th:errors="*{data}"></div>
+				</div>
+			</div>
+			
+			<div class="field">
+				<label for="descricao">Descrição</label>
+				<textarea name="descricao" id="descricao"></textarea>
+				<div class="error" th:if="${#fields.hasErrors('descricao')}" th:errors="*{descricao}"></div>
+			</div>
+			
+			<div>
+				<button type="submit" class="btn">Adicionar</button>
+			</div>
+			
+		</form>
+	</div>
+	
+	
+
+</body>
+</html>

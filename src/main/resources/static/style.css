@@ -1,0 +1,266 @@
+*{
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1em;
+	margin:0;
+	padding: 0;
+	text-decoration: none;
+	border:none;
+	box-sizing: border-box;
+}
+
+body{
+	background:#CCC;
+}
+
+.container{
+	border-radius: 5px;
+	padding:20px;
+	margin: 0 auto;
+	width: 1024px;
+	
+}
+
+.header{
+	background:#FFF;
+}
+
+h1{
+	font-size:2em;
+}
+
+h2{
+	margin: 15px auto;
+	width: 1024px;
+	font-size:1.5em;
+}
+
+nav{
+	padding: 5px 0;
+}
+
+.btn{
+	display: inline-flex;
+	gap:5px;
+	flex-direction: row;
+	background:#333;
+	color:#FFF;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: 0.5s all;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background: #555;
+}
+
+
+.content{
+	background:#FFF;
+}
+
+
+.field{
+	padding:5px 0;
+	width:100%;
+}
+
+.field label{
+	display: block;
+}
+.field input, .field textarea{
+	border: 1px solid #999;
+	border-radius:3px;
+	padding: 5px;
+	width: 100%;
+}
+
+.row{
+	display: flex;
+	gap: 10px;
+}
+
+.error {
+	color:#F00;
+	font-size:0.7em;
+}
+
+.tipo-lacamento{
+	display: flex;
+	gap: 10px;
+}
+
+.tipo-lacamento input{
+	display: none
+}
+
+.tipo-lacamento input + label{
+	background:#CCC;
+	padding: 15px;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align:center;
+}
+
+.tipo-lacamento input:checked + label{
+	background: #333;
+	color:#FFF;
+}
+
+.alert-success{
+	padding: 20px;
+	margin:10px 0;
+	background: #a2ea8f;
+	border: 1px solid #227c09;
+	color: #227c09;
+	border-radius: 5px;
+}
+
+.alert-error{
+	padding: 20px;
+	margin:10px 0;
+	background: #f7adad;
+	border: 1px solid #a01111;
+	color: #a01111;
+	border-radius: 5px;
+}
+
+
+table{
+	width: 100%;
+	border: 1px solid #333;
+	margin: 10px 0;
+}
+
+table tr th{
+	background: #333;
+	color: #FFF;
+	padding: 3px;
+}
+
+table tr td{
+	padding: 3px;
+}
+
+table tr:nth-child(even) td{
+	background: #CCC;
+}
+
+
+.paginate{
+	display:inline-block;
+	border: 1px solid #999;
+	border-radius:5px;	
+	padding:3px
+}
+
+.paginate li{
+	list-style: none;
+	display: inline-block;
+}
+
+.page-item{
+	display: inline-block;
+	padding: 5px 10px;
+	color: #333
+}
+
+.active{
+	border-radius:3px;	
+	background:#333;
+	color: #FFF	
+}
+
+
+
+.search-form{
+	display: flex;
+	gap:10px;
+	margin: 10px 0;
+}
+
+.search-form input, .search-form 	select{
+	width: 100%;
+	border: 1px solid #999;
+	padding: 5px;
+	font-size: 1.1em;
+	border-radius: 5px;
+}
+
+.search-form button{
+	background: #333;
+	color: #FFF;
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 5px 10px;	
+	cursor: pointer;
+}
+
+.search-form svg{
+	width: 24px;
+	height: 24px;
+}
+
+
+.saldo-container{
+	display: flex;
+	gap:50px;
+	margin: 20px 0;
+	justify-content: center;
+}
+
+.saldo-container > div{
+	padding:10px 30px;
+	text-align:center;
+	border-radius: 10px;
+	color:#FFF;
+}
+
+.saldo-container .caixo-titulo{
+	font-size: 1.2em;
+	padding-bottom: 20px;
+}
+
+.saldo-container div .caixa-valor{
+	font-size: 1.5em;
+}
+
+.saldo-container .saldo{
+	background: #304b9b;
+}
+
+.saldo-container .entrada{
+	background: #1d6b11;
+}
+.saldo-container .saida{
+	background: #b51e1e;
+}
+
+.action {
+	text-align:center;
+}
+.action a svg{
+	width: 24px;
+	height: 24px;
+	color: #333
+}
+
+
+
+#login-container{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+#login-container form{
+	background: #FFF;
+	width: 500px;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+#login-container .field{
+	margin-bottom:10px;
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div th:fragment="flash">
+		<div  class="alert-error"  th:text="${errorMessage}" th:if="${errorMessage}"></div>
+		<div  class="alert-success"  th:text="${successMessage}" th:if="${successMessage}"></div>
+	</div>
+
+</body>
+</html>

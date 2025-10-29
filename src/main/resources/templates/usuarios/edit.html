@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Editar Usuário</title>
+	<link href="/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<div th:insert="~{parts/header :: header}"></div>
+	
+	<h2>Editar Usuário</h2>
+		
+	<div class="container content">
+	
+		<div th:insert="~{parts/flash :: flash}"></div>
+	
+		<form method="POST" th:action="@{/usuarios/update/{id}(id=${usuario.id})}" th:object="${usuario}">
+			
+			<div class="field">
+				<label for="nome">Nome: </label>
+				<input type="text" name="nome" id="nome" th:value="${usuario.nome}">
+				<div class="error" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+			</div>
+			<div  class="field">
+				<label for="email">E-mail: </label>
+				<input type="email" name="email" id="email"  th:value="${usuario.email}">
+				<div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+			</div>
+			<div  class="field">
+				<label for="senha">Senha: </label>
+				<input type="text" name="senha" id="senha">
+				<div class="error" th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"></div>
+			</div>
+			
+			<div>
+				<button type="submit" class="btn">Salvar</button>
+			</div>
+			
+		</form>
+	</div>
+</body>
+</html>
